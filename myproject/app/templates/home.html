@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+    <h1>this is my home page</h1>
+   
+        <center>
+            <table cellspacing="10px">
+             {% for i in data %}
+            <tr>
+                <td >
+                {{i.title}}
+            </td >
+            <td>
+                {{i.desc}}
+            </td>
+            
+            </tr>
+            <tr>
+                <td>
+                <a href="{% url 'delete' i.id %}">DELETE</a>
+            </td>
+            <td>
+                <a href="{% url 'completed' i.id %}">COMPLETE</a>
+            </td>
+            <td>
+                <a href="{% url 'update' i.id %}">UPDATE</a>
+            </td>
+            </tr>
+             {% endfor %}
+        </table>
+   
+        </center>
+        <center>
+            <button type="reset"><a href="{% url 'delete_all' %}">delete all</a></button>
+        </center>
+    {% endblock %}

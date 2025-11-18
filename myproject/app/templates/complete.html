@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+     {% for i in data %}
+     <h1>{{i.title}} // {{i.desc}}// </h1>
+     <a href="{% url 'deletecomplete' i.id %}">Delete</a>
+      <a href="{% url 'restorecomplete' i.id %}">Resotre</a>
+     {% endfor %}
+     <center>
+        <button>
+        <a href="{% url 'deleteallcomplete' %}">CLEAR ALL</a>
+     </button>
+     </center>
+
+    {% endblock %}

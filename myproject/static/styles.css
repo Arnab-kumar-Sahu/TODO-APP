@@ -1,0 +1,96 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* BODY */
+body {
+    background: #f8fafc;
+}
+
+/* NAVBAR (ToDo part) */
+nav {
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.logo h1:hover {
+    transform: scale(1.05);
+}
+
+/* LINKS (your separate div below nav) */
+.links {
+    background: linear-gradient(90deg, #2563eb, #9333ea); /* same gradient as nav */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* LINKS TEXT STYLE */
+.links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover underline animation */
+.links a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.links a:hover {
+    color: #f1f5f9;
+    transform: translateY(-2px);
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

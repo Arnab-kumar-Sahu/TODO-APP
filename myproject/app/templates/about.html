@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>About This Project</h1>
+<p>This is a simple and efficient <strong>To-Do List Web Application</strong> built using <strong>Django</strong>.</p>
+<p>It allows users to <strong>add, edit, complete, and delete tasks</strong> easily.</p>
+<p>The goal of this project is to help users stay organized and manage their daily activities effectively.</p>
+<p>Developed by <strong>Arnab Kumar Sahu</strong>.</p><br>
+<a href="{% url 'home' %}" style="text-decoration:none; background:#4CAF50; color:white; padding:8px 15px; border-radius:6px;">Back to Home</a>
+
+{% endblock %}

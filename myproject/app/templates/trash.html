@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+
+
+ {% block content %}
+    {% for i in data %}
+        <div >
+            <div style="display: inline-block;">
+                <p>{{i.title}}</p>
+            <p>{{i.desc}}</p>
+            <a href="{% url 'trashdelete' i.id %}">delete</a>
+            <a href="{% url 'restoretrash' i.id %}">Resotre</a>
+
+            </div>
+           
+            
+        </div>
+       
+        {% endfor %}
+         <center>
+            <div>
+                <button type="reset">
+                    <a href="{% url 'deletealltrash' %}"> CLEAR ALL</a>
+                    
+                </button>
+            </div>
+        </center>
+    {% endblock %}
