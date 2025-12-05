@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-import app
+import app,authapp
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app/',include('app.urls')),
+    path('authapp/',include('authapp.urls')),
 ]

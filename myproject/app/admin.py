@@ -8,3 +8,15 @@ class Admintodo(admin.ModelAdmin):
 
 
 admin.site.register(Todo,Admintodo)
+class Admincompleted(admin.ModelAdmin):
+    name=Completemodel
+
+
+
+admin.site.register(Completemodel,Admincompleted)
+class Admintrash(admin.ModelAdmin):
+    name=Trashmodel
+
+
+
+admin.site.register(Trashmodel,Admintrash)
